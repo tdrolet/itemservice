@@ -38,6 +38,8 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public ItemDto getById(UUID itemId){
+
+        //todo stubbed for now
         return ItemDto.builder().id(UUID.randomUUID())
                 .itemName("S123456789")
                 .description("Hardcoded sample item")
