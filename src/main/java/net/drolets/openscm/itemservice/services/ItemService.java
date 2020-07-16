@@ -1,6 +1,7 @@
 package net.drolets.openscm.itemservice.services;
 
 import net.drolets.openscm.itemservice.web.model.ItemDto;
+import org.springframework.context.annotation.Bean;
 
 import java.util.UUID;
 

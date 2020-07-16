@@ -2,6 +2,7 @@ package net.drolets.openscm.itemservice.services;
 
 import lombok.extern.slf4j.Slf4j;
 import net.drolets.openscm.itemservice.web.model.ItemDto;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -9,6 +10,7 @@ import java.util.UUID;
 /**
  * Created by tjd 7/16/20
  */
+
 
 @Slf4j
 @Service

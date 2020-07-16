@@ -18,11 +18,12 @@ import java.util.UUID;
 @RestController
 public class ItemController {
 
-    private final ItemService itemService;
-
+    @Autowired
+    private ItemService itemService;
+/*
     public ItemController(ItemService itemService) {
         this.itemService = itemService;
-    }
+    } */
 
     @GetMapping("/{itemId}")
     public ResponseEntity<ItemDto> getItemById(@PathVariable("itemId") UUID itemId){
