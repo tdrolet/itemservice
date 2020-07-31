@@ -1,0 +1,13 @@
+﻿Open SCM
+
+
+Goal
+
+
+Provide open source extensible framework to provide supply chain management (mostly focused on inventory planning and replenishment) based on a “reactive” concept.  “Reactive” in the sense as to eliminate batch processing and instead have the supply chain represented by a set of software entities reflecting real world entities (such as item/product, locations, etc) which model the state of the supply chain and react to changes (changes to demand, supply interruptions, etc) via interacting with other supply chain entities.
+
+
+For example, if an item at a store suddenly has a large, unanticipated spike in demand, it can use messaging to request a replenishment to meet the new demand.  
+
+
+Ultimately, the goal would be to provide a system which reacts with much less latency than existing SCM planning systems, and is much more efficient, in that state is constantly updated and evolving rather than relying on large, intensive planning runs which needlessly recalculate plans which are for the most part already reasonable.
