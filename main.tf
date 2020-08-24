@@ -1,6 +1,6 @@
 provider "google" {
   project = "itemservice"
-  credentials = file("itemservice-gcloud.json")
+  credentials = file("/Users/tjd/repos/itemservice/terraform.json")
 }
 
 
