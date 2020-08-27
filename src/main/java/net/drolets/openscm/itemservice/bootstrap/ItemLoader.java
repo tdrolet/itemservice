@@ -14,6 +14,7 @@ public class ItemLoader implements CommandLineRunner {
 
     private final ItemRepository itemRepository;
 
+
     public ItemLoader(ItemRepository itemRepository) {
         this.itemRepository = itemRepository;
     }

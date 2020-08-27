@@ -1,0 +1,45 @@
+= OpenSCM ItemService
+Tom Drolet;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+
+A service to provide Item (product) services for OpenSCM framework.
+
+GET requests
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/item-get/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/item-get/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/item-get/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/item-get/response-body.adoc[]
+
+
+Response Fields:
+include::{snippets}/v1/item-get/response-fields.adoc[]
+
+POST requests
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/item-post/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/item-post/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/item-post/http-response.adoc[]
+
+Response Fields:
+include::{snippets}/v1/item-post/request-fields.adoc[]
