@@ -15,7 +15,7 @@ resource "google_cloud_run_service" "my-service" {
   template {
     spec {
       containers {
-        image = "gcr.io/itemservice/itemservice:debug"
+        image = "gcr.io/itemservice/itemservice:latest"
         resources {
           limits = {
             memory = "1024Mi"
