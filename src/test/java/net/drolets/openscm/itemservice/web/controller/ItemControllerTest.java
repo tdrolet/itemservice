@@ -40,7 +40,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)
 @ExtendWith(RestDocumentationExtension.class)
 //@AutoConfigureRestDocs
-@AutoConfigureRestDocs(uriScheme = "https", uriHost = "itemservice.tdrolet.com")
+@AutoConfigureRestDocs(uriScheme = "https", uriHost = "itemservice.tdrolet.com", uriPort = 443)
 @WebMvcTest(controllers = ItemController.class)
 
 class ItemControllerTest {
