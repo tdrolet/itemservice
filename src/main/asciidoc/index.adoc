@@ -42,5 +42,31 @@ And one showing the HTTP response:
 
 include::{snippets}/v1/item-post/http-response.adoc[]
 
-Response Fields:
-include::{snippets}/v1/item-post/request-fields.adoc[]
+PUT requests
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/item-put/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/item-put/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/item-put/http-response.adoc[]
+
+DELETE requests
+
+One showing how to make a request using cURL:
+
+include::{snippets}/v1/item-delete/curl-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/v1/item-delete/http-request.adoc[]
+
+And one showing the HTTP response:
+
+include::{snippets}/v1/item-delete/http-response.adoc[]
+

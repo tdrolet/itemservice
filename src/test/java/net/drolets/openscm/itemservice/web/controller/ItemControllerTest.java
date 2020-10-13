@@ -102,16 +102,16 @@ class ItemControllerTest {
                 .content(itemDtoJson))
                 .andExpect(status().isCreated())
                 .andDo(document("v1/item-post",
-                        requestFields(
-                                fieldWithPath("id").ignored(),
-                                fieldWithPath("itemName")
-                                    .description("Name of the Item.")
-                                    .attributes(key("constraints")
-                                            .value(constraintDescriptions.descriptionsForProperty("itemName"))),
-                                fieldWithPath("description").description("Description of the Item.")
-                                    .attributes(key("constraints")
-                                            .value(constraintDescriptions.descriptionsForProperty("description")))
-                        )
+                            requestFields(
+                                    fieldWithPath("id").ignored(),
+                                    fieldWithPath("itemName")
+                                        .description("Name of the Item.")
+                                        .attributes(key("constraints")
+                                                .value(constraintDescriptions.descriptionsForProperty("itemName"))),
+                                    fieldWithPath("description").description("Description of the Item.")
+                                        .attributes(key("constraints")
+                                                .value(constraintDescriptions.descriptionsForProperty("description")))
+                            )
                         )
                 );
 
@@ -125,13 +125,42 @@ class ItemControllerTest {
         ItemDto itemDto = validitem;
         String itemDtoJson = objectMapper.writeValueAsString(itemDto);
 
+        ConstraintDescriptions constraintDescriptions = new ConstraintDescriptions(ItemDto.class);
+
         //when
         mockMvc.perform(put("/api/v1/item/" + validitem.getId())
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(itemDtoJson))
-                .andExpect(status().isNoContent());
+                .andExpect(status().isNoContent())
+                .andDo(document("v1/item-put",
+                            requestFields(
+                                    fieldWithPath("id").ignored(),
+                                    fieldWithPath("itemName")
+                                            .description("Name of the Item.")
+                                            .attributes(key("constraints")
+                                                    .value(constraintDescriptions.descriptionsForProperty("itemName"))),
+                                    fieldWithPath("description").description("Description of the Item.")
+                                            .attributes(key("constraints")
+                                                    .value(constraintDescriptions.descriptionsForProperty("description")))
+                            )
+                        )
+                );
 
         then(itemService).should().updateItem(any(), any());
 
+    }
+
+    @Test
+    public void deleteitem() throws Exception {
+
+
+        mockMvc.perform(delete("/api/v1/item/{itemId}", validitem.getId().toString()).accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent())
+                .andDo(document("v1/item-delete",
+                                    pathParameters(
+                                            parameterWithName("itemId").description("UUID of desired Item to delete.")
+                                    )
+                                )
+                );
     }
 }
