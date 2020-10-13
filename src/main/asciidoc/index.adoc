@@ -1,4 +1,5 @@
 = OpenSCM ItemService
+:favicon:
 Tom Drolet;
 :doctype: book
 :icons: font
