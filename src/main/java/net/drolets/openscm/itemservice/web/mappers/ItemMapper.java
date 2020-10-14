@@ -9,6 +9,7 @@ import net.drolets.openscm.itemservice.web.model.ItemDto;
  */
 
 
+@SuppressWarnings("ALL")
 @Mapper(uses = {DateMapper.class})
 public interface ItemMapper {
 

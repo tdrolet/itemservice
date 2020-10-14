@@ -2,7 +2,6 @@ package net.drolets.openscm.itemservice.web.controller;
 
 import net.drolets.openscm.itemservice.services.ItemService;
 import net.drolets.openscm.itemservice.web.model.ItemDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,16 +13,22 @@ import java.util.UUID;
  * Created by tjd 7/15/20
  */
 
-@RequestMapping("/api/v1/item")
+@RequestMapping("/api/v1/items")
 @RestController
 public class ItemController {
 
-    @Autowired
-    private ItemService itemService;
-/*
+    private final ItemService itemService;
+
     public ItemController(ItemService itemService) {
         this.itemService = itemService;
-    } */
+    }
+
+    @GetMapping
+    public ResponseEntity<ItemDto[]> getItems(@RequestParam(name = "limit", required = false, defaultValue = "100") int limit,
+                                              @RequestParam(name = "offset", required = false, defaultValue = "0") int offset){
+        //todo impl
+        return new ResponseEntity<>(itemService.getItems(limit, offset), HttpStatus.OK);
+    }
 
     @GetMapping("/{itemId}")
     public ResponseEntity<ItemDto> getItemById(@PathVariable("itemId") UUID itemId){

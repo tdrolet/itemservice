@@ -10,6 +10,7 @@ import java.time.ZoneOffset;
  * Created by tjd 8/26/20
  */
 
+@SuppressWarnings("unused")
 @Component
 public class DateMapper {
     public OffsetDateTime asOffsetDateTime(Timestamp ts){
@@ -22,6 +23,7 @@ public class DateMapper {
         }
     }
 
+    @SuppressWarnings("unused")
     public Timestamp asTimestamp(OffsetDateTime offsetDateTime){
         if(offsetDateTime != null) {
             return Timestamp.valueOf(offsetDateTime.atZoneSameInstant(ZoneOffset.UTC).toLocalDateTime());

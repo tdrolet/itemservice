@@ -25,7 +25,7 @@ class ItemserviceApplicationTests {
 
     @Test
     void contextLoads() throws Exception {
-        mockMvc.perform(get("/api/v1/item/" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/api/v1/items/" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
 

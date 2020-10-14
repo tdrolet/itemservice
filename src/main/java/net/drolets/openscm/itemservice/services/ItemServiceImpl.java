@@ -2,7 +2,6 @@ package net.drolets.openscm.itemservice.services;
 
 import lombok.extern.slf4j.Slf4j;
 import net.drolets.openscm.itemservice.web.model.ItemDto;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -46,5 +45,25 @@ public class ItemServiceImpl implements ItemService {
                 .itemName("S123456789")
                 .description("Hardcoded sample item")
                 .build();
+    }
+
+    @Override
+    public ItemDto[] getItems(int limit, int offset){
+
+        //todo stubbed for now
+        return new ItemDto[]{
+                ItemDto.builder().id(UUID.randomUUID())
+                        .itemName("S123456789")
+                        .description("Hardcoded sample item 1")
+                        .build(),
+                ItemDto.builder().id(UUID.randomUUID())
+                        .itemName("S987654321")
+                        .description("Hardcoded sample item 2")
+                        .build(),
+                ItemDto.builder().id(UUID.randomUUID())
+                        .itemName("S123454321")
+                        .description("Hardcoded sample item 3")
+                        .build()
+                };
     }
 }

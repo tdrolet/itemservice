@@ -41,5 +41,5 @@ resource "google_cloud_run_service_iam_member" "allUsers" {
 }
 
 output "url" {
-  value = "${google_cloud_run_service.my-service.status[0].url}"
+  value = google_cloud_run_service.my-service.status[0].url
 }

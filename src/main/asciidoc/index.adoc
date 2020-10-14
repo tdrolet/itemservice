@@ -5,68 +5,107 @@ Tom Drolet;
 :icons: font
 :source-highlighter: highlightjs
 
-A service to provide Item (product) services for OpenSCM framework.
+A service to manage Items (products) for OpenSCM framework.
 
 GET requests
 
+Request for list of items using cURL:
+
+include::{snippets}/v1/items-get/curl-request.adoc[]
+
+One showing a request for list of items with HTTP request:
+
+include::{snippets}/v1/items-get/http-request.adoc[]
+
+The HTTP response for request for list:
+
+include::{snippets}/v1/items-get/http-response.adoc[]
+
+Response Body:
+include::{snippets}/v1/items-get/response-body.adoc[]
+
+Response Fields:
+include::{snippets}/v1/items-get/response-fields.adoc[]
+
+Request for an specific Item
+
 One showing how to make a request using cURL:
 
-include::{snippets}/v1/item-get/curl-request.adoc[]
+include::{snippets}/v1/items-getbyid/curl-request.adoc[]
 
 One showing the HTTP request:
 
-include::{snippets}/v1/item-get/http-request.adoc[]
+include::{snippets}/v1/items-getbyid/http-request.adoc[]
 
-And one showing the HTTP response:
+Request Path Parameters:
 
-include::{snippets}/v1/item-get/http-response.adoc[]
+include::{snippets}/v1/items-getbyid/path-parameters.adoc[]
+
+
+The HTTP response:
+
+include::{snippets}/v1/items-getbyid/http-response.adoc[]
 
 Response Body:
-include::{snippets}/v1/item-get/response-body.adoc[]
+include::{snippets}/v1/items-getbyid/response-body.adoc[]
 
 
 Response Fields:
-include::{snippets}/v1/item-get/response-fields.adoc[]
+include::{snippets}/v1/items-getbyid/response-fields.adoc[]
+
 
 POST requests
 
 One showing how to make a request using cURL:
 
-include::{snippets}/v1/item-post/curl-request.adoc[]
+include::{snippets}/v1/items-post/curl-request.adoc[]
 
 One showing the HTTP request:
 
-include::{snippets}/v1/item-post/http-request.adoc[]
+include::{snippets}/v1/items-post/http-request.adoc[]
+
+Request Fields:
+
+include::{snippets}/v1/items-post/request-fields.adoc[]
 
 And one showing the HTTP response:
 
-include::{snippets}/v1/item-post/http-response.adoc[]
+include::{snippets}/v1/items-post/http-response.adoc[]
 
 PUT requests
 
 One showing how to make a request using cURL:
 
-include::{snippets}/v1/item-put/curl-request.adoc[]
+include::{snippets}/v1/items-put/curl-request.adoc[]
 
 One showing the HTTP request:
 
-include::{snippets}/v1/item-put/http-request.adoc[]
+include::{snippets}/v1/items-put/http-request.adoc[]
+
+Request Fields:
+
+include::{snippets}/v1/items-put/request-fields.adoc[]
 
 And one showing the HTTP response:
 
-include::{snippets}/v1/item-put/http-response.adoc[]
+include::{snippets}/v1/items-put/http-response.adoc[]
 
 DELETE requests
 
 One showing how to make a request using cURL:
 
-include::{snippets}/v1/item-delete/curl-request.adoc[]
+include::{snippets}/v1/items-delete/curl-request.adoc[]
 
 One showing the HTTP request:
 
-include::{snippets}/v1/item-delete/http-request.adoc[]
+include::{snippets}/v1/items-delete/http-request.adoc[]
+
+Request Path Parameters:
+
+include::{snippets}/v1/items-delete/path-parameters.adoc[]
+
 
 And one showing the HTTP response:
 
-include::{snippets}/v1/item-delete/http-response.adoc[]
+include::{snippets}/v1/items-delete/http-response.adoc[]
 
