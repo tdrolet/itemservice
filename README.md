@@ -7,7 +7,7 @@ The itemservice provides REST APIs to manage items (products) in a supply chain.
 
 API documentation may be found at:
 
-    [ItemService API](https://itemservice.tdrolet.com/docs/index.html)
+[ItemService API](https://itemservice.tdrolet.com/docs/index.html)
     
     
 Note: service is deployed on Google Cloud Run with mininum count set to zero;  first invocation of API may have delay as instance is spun up.
