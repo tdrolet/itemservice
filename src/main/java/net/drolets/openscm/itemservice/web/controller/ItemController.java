@@ -15,6 +15,7 @@ import java.util.UUID;
 
 @RequestMapping("/api/v1/items")
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class ItemController {
 
     private final ItemService itemService;
